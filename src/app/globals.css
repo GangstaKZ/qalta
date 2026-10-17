@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f6f7f9;
+  --color-card: #ffffff;
+  --color-primary: #2fbf71;
+  --color-primary-dark: #24965a;
+  --color-ink: #1c1c1e;
+  --color-muted: #8e8e93;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --color-border: #e5e7eb;
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes sheet-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-sheet-up {
+  animation: sheet-up 180ms ease-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 160ms ease-out;
+}
+
+.animate-modal-in {
+  animation: modal-in 180ms ease-out;
+}
